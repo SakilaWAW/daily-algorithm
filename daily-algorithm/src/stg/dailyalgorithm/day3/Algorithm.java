@@ -27,23 +27,32 @@ public class Algorithm {
 		return result;
 	}
 	
-	private int func1_entrance(int ball_num,int basket_num){
-		int count = func1(ball_num,basket_num);
-		int permutation = 1;
-		for(int i = basket_num;i > 1 ;--i ){
-			permutation *= i;
-		}
-		return count /= permutation;
-	}
-	
-	private int func1(int ball_num,int basket_num){
-		if(ball_num == 0 || basket_num == 1){
+	/**
+	 * recursive function:
+	 * In every judgment:
+	 * WHEN ball_num < basket_num:
+	 * 	func1(ball_num,basket_num) = func1(ball_num,ball_num);
+	 * WHEN ball_num >= basket_num,there is two distributions:
+	 * 	1.Every basket has at least one ball:
+	 * 		func1(ball_num,basket_num) = func1(ball_num-basket_num,basket_num);
+	 * 	2.There are at least one empty basket.
+	 * 		func1(ball_num,basket_num) = func1(ball_num,basket_num-1);
+	 * The exits of the function are:
+	 * 	1.If ball_num == 0: return 1;
+	 * 	2.If basket_num == 1: return 1;
+	 * @param ball_num
+	 * @param basket_num
+	 * @return the count of the distribution
+	 */
+	private int func1(int ball_num, int basket_num) {
+		if (ball_num == 0 || basket_num == 1) {
 			return 1;
 		}
-		int count = 0;
-		for(int i =0;i<=ball_num; ++i){
-			count += func1(ball_num-i,basket_num-1);
+		if (ball_num < basket_num) {
+			return func1(ball_num, ball_num);
+		} else {
+			return func1(ball_num - basket_num, basket_num)
+					+ func1(ball_num, basket_num - 1);
 		}
-		return count;
 	}
 }
