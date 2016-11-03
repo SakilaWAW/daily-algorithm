@@ -42,6 +42,12 @@ The question is:
 Calculate the preorder traverse of a binary tree according to the inorder  
 traverse and the postorder traverse.(every node in the binary tree is different)  
 
+##day6
+
+Today,I want to learn something about sort algorithm,it's basic and absolutely important.  
+The first sort I learn is merge sort.INTERESTING!~  
+
+
 
 
 
