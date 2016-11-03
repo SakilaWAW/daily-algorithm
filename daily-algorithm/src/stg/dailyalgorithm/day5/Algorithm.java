@@ -102,8 +102,7 @@ public class Algorithm {
 			postorder_left_branch = postorder_str.substring(0,
 					left_branch_length);
 		}
-		if (root_index != inorder_str.length() - 1) {// right branch is not
-														// empty
+		if (root_index != inorder_str.length() - 1) {// right branch is not empty
 			inorder_right_branch = inorder_str.substring(root_index + 1);
 			right_branch_length = inorder_right_branch.length();
 			postorder_right_branch = postorder_str.substring(
