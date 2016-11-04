@@ -1,21 +1,19 @@
 package stg.dailyalgorithm.day6;
 
-public class Algorithm {
+public class MergeSort extends Sort{
 	
-	/**
-	 * entrance of the algorithm
-	 * @param target_array
-	 * @return array in order
-	 */
-	public int[] calculate(int[] target_array){
-		int[] result = null;
-		if(target_array!=null){
-			result = func1(target_array);
-		}
-		return result;
+	public MergeSort(int[] target_arr) {
+		super(target_arr);
 	}
 	
-	
+	public void sort() {
+		if(m_array != null){
+			func1(m_array);
+			printResult(true);
+		}else{
+			printResult(false);
+		}
+	}
 	/**
 	 * using merge sort.It's a basic function in sort.
 	 * @param target_array
@@ -81,5 +79,9 @@ public class Algorithm {
 		for(int i=0;i<result.length;++i){
 			target_array[start_index+i] = result[i];
 		}
+	}
+
+	public String getName() {
+		return "Merge sort";
 	}
 }

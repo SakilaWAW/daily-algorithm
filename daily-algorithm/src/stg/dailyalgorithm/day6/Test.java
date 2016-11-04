@@ -24,23 +24,41 @@ public class Test {
 				for(int i=0 ; i<length ; ++i){
 					target_array[i] = Integer.parseInt(array[i]);
 				}
-				Algorithm algorithm = new Algorithm();
-				algorithm.calculate(target_array);
-				printArray(target_array);
+				sortInVariousMethod(target_array);
 				break;
 			}
 		}
 		scanner.close();
 	}
 	
-	private static void printArray(int[] array){
-		System.out.println("The array in order is:");
-		for(int i=0;i<array.length;++i){
-			System.out.print(array[i]);
-			if(i!=array.length-1){
-				System.out.print(",");
-			}
+	/**
+	 * sort the array in various method:
+	 * It contains:
+	 * 	merge sort
+	 *  select sort 
+	 * up to date.
+	 */
+	private static void sortInVariousMethod(int[] target_arr){
+		Sort sort;
+		sort = new SelectSort(copyOf(target_arr));
+		sort.sort();
+		sort = new MergeSort(copyOf(target_arr));
+		sort.sort();
+	}
+	
+	/**
+	 * for I sort the array directly(in the memory),
+	 * when I try various sort method,I must use the 
+	 * copy of the original array.
+	 * @param target_arr original array
+	 * @return copy of original array
+	 */
+	private static int[] copyOf(int[] target_arr){
+		int[] copy = new int[target_arr.length];
+		for(int i = 0;i< target_arr.length ; ++i){
+			copy[i] = target_arr[i];
 		}
+		return copy;
 	}
 
 }
