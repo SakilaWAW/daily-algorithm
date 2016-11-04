@@ -28,7 +28,7 @@ public class ShellSort extends Sort {
 		// step is the improvement to insert sort
 		// how to choose the value of  
 		int step = target_arr.length / 3;
-		while (step > 0) {
+		while (step >= 1) {
 			for (int index = 0; index < target_arr.length; index += step) {
 				int num = target_arr[index];
 				int compare_index = index - step;
@@ -43,7 +43,7 @@ public class ShellSort extends Sort {
 				}
 				target_arr[compare_index + step] = num;
 			}
-			step /= 2;
+			step /= 3;
 		}
 	}
 
