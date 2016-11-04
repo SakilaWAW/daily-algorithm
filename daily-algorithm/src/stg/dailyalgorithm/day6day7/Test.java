@@ -1,4 +1,4 @@
-package stg.dailyalgorithm.day6;
+package stg.dailyalgorithm.day6day7;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -34,8 +34,7 @@ public class Test {
 	/**
 	 * sort the array in various method:
 	 * It contains:
-	 * 	merge sort
-	 *  select sort 
+	 * 	Merge sort,Select sort,Insert sort,Shell sort
 	 * up to date.
 	 */
 	private static void sortInVariousMethod(int[] target_arr){
@@ -43,6 +42,10 @@ public class Test {
 		sort = new SelectSort(copyOf(target_arr));
 		sort.sort();
 		sort = new MergeSort(copyOf(target_arr));
+		sort.sort();
+		sort = new InsertSort(copyOf(target_arr));
+		sort.sort();
+		sort = new ShellSort(copyOf(target_arr));
 		sort.sort();
 	}
 	

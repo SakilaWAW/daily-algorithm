@@ -1,4 +1,4 @@
-package stg.dailyalgorithm.day6;
+package stg.dailyalgorithm.day6day7;
 
 public class SelectSort extends Sort{
 
@@ -6,6 +6,7 @@ public class SelectSort extends Sort{
 		super(target_arr);
 	}
 		
+	@Override
 	public void sort() {
 		if(m_array != null){
 			selectSort(m_array);
@@ -53,6 +54,7 @@ public class SelectSort extends Sort{
 		target_arr[index2] = temp;
 	}
 
+	@Override
 	public String getName() {
 		return "Select sort";
 	}

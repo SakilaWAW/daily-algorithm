@@ -1,4 +1,4 @@
-package stg.dailyalgorithm.day6;
+package stg.dailyalgorithm.day6day7;
 
 public class MergeSort extends Sort{
 	
@@ -6,6 +6,7 @@ public class MergeSort extends Sort{
 		super(target_arr);
 	}
 	
+	@Override
 	public void sort() {
 		if(m_array != null){
 			func1(m_array);
@@ -81,6 +82,7 @@ public class MergeSort extends Sort{
 		}
 	}
 
+	@Override
 	public String getName() {
 		return "Merge sort";
 	}
