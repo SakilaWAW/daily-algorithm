@@ -47,6 +47,12 @@ traverse and the postorder traverse.(every node in the binary tree is different)
 Today,I want to learn something about sort algorithm,it's basic and absolutely important.  
 The first sort I learn is merge sort.INTERESTING!~  
 
+##day7
+
+I learned insert sort,shell sort,select sort today,and also implement them in day6's code.  
+I will implement all common sort methods in the near future.  
+
+
 
 
 
