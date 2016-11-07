@@ -49,6 +49,8 @@ public class Test {
 		sort.sort();
 		sort = new HeapSort(copyOf(target_arr));
 		sort.sort();
+		sort = new QuickSort(copyOf(target_arr));
+		sort.sort();
 	}
 	
 	/**
