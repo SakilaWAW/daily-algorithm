@@ -1,4 +1,4 @@
-package stg.dailyalgorithm.day6day7;
+package stg.dailyalgorithm.day6day7day8;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -46,6 +46,8 @@ public class Test {
 		sort = new InsertSort(copyOf(target_arr));
 		sort.sort();
 		sort = new ShellSort(copyOf(target_arr));
+		sort.sort();
+		sort = new HeapSort(copyOf(target_arr));
 		sort.sort();
 	}
 	

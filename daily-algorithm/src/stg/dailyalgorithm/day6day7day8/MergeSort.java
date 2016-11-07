@@ -1,4 +1,4 @@
-package stg.dailyalgorithm.day6day7;
+package stg.dailyalgorithm.day6day7day8;
 
 public class MergeSort extends Sort{
 	

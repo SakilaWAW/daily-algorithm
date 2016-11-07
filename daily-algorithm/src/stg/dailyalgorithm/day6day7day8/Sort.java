@@ -1,4 +1,4 @@
-package stg.dailyalgorithm.day6day7;
+package stg.dailyalgorithm.day6day7day8;
 
 /**
  * All the sort algorithm must implement ISort to realize the polymorphic.
