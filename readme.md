@@ -52,6 +52,13 @@ The first sort I learn is merge sort.INTERESTING!~
 I learned insert sort,shell sort,select sort today,and also implement them in day6's code.  
 I will implement all common sort methods in the near future.  
 
+##day8
+
+Today,I will realize the most useful sort algorithm:Heap sort & Quick sort!Quick sort is known  
+as the top ten algorithm during the decade.EXCITING!~＞ω＜(code is merged in day6's project.)
+
+
+
 
 
 
