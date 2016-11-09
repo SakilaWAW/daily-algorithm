@@ -2,7 +2,7 @@ package stg.dailyalgorithm.day9;
 
 import java.util.Scanner;
 
-import stg.tools.NumericCheck;
+import stg.tools.StringTypeChecker;
 
 public class Test {
 
@@ -15,8 +15,7 @@ public class Test {
 			String values = scanner.nextLine();
 			System.out.println("please input the target index(reverse):");
 			int target_index = scanner.nextInt();
-			if (NumericCheck.isIntegerArray(values, ",")
-					&& NumericCheck.isPositiveInteger(target_index + "")) {
+			if (StringTypeChecker.isPositiveInteger(target_index + "")) {
 				initLinkedlist(values,",");
 				Algorithm algorithm = new Algorithm();
 				Node head = initLinkedlist(values,",");
