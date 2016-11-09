@@ -13,10 +13,10 @@ public class Algorithm {
 	
 	private boolean isSuccess = false;
 	/**
-	 * entrance of the algorithm
+	 * entrance1 of the algorithm
 	 * @param head head node of the list
 	 */
-	public boolean calculate(Node head,int target_index){
+	public boolean calculate1(Node head,int target_index){
 		//error check and output result
 		if(head != null){
 			pushForResult(head, target_index);
@@ -30,6 +30,58 @@ public class Algorithm {
 			System.out.println("please input values.");
 			return false;
 		}
+	}
+	
+	/**
+	 * entrance2 of the algorithm.
+	 * This is a pretty elaborate method:
+	 * The algorithm uses two pointer,tandem iterate the list
+	 * in the same speed,the distance of them is k.
+	 * @param head head node of the list
+	 */
+	public boolean calculate2(Node head,int target_index){
+		//error check and output result
+		if(head != null){
+			boolean flag = findNodeThenPrint(head, target_index);
+			if(flag){
+				return true;
+			}else{
+				System.out.println("the params are unreasonable,please try again.");
+				return false;
+			}
+		}else{
+			System.out.println("please input values.");
+			return false;
+		}
+	}
+	
+	/**
+	 * the best method.
+	 * @param head head node of the list 
+	 * @param target_index 
+	 * @return true:print success,false:failed
+	 */
+	private boolean findNodeThenPrint(Node head,int target_index){
+		Node before = head;
+		Node after = head;
+		//before is target_index steps faster than after
+		for(int i=0;i<target_index;++i){
+			if(before.next() == null){
+				return false;
+			}else{
+				before = before.next();
+			}
+		}
+		
+		//push before to the end
+		while(before.next()!=null){
+			before = before.next();
+			after = after.next();
+		}
+		
+		System.out.println("the target node's value is:" + after.getValue());
+		return true;
+		
 	}
 	
 	/**
@@ -48,7 +100,7 @@ public class Algorithm {
 			}
 			return reverse_index + 1;
 		}else{
-			return -1;
+			return 0;
 		}
 	}
 }

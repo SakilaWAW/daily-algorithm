@@ -7,8 +7,9 @@ import stg.tools.NumericCheck;
 public class Test {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner;
 		while (true) {
+			scanner = new Scanner(System.in);
 			System.out.println("please input the target linked list" +
 									"(values separate with ','):");
 			String values = scanner.nextLine();
@@ -19,7 +20,7 @@ public class Test {
 				initLinkedlist(values,",");
 				Algorithm algorithm = new Algorithm();
 				Node head = initLinkedlist(values,",");
-				if(algorithm.calculate(head,target_index)){
+				if(algorithm.calculate1(head,target_index)){
 					break;
 				}
 			} else {
@@ -41,7 +42,9 @@ public class Test {
 		String[] values_str_arr = values.split(regex);
 		for(int i=0;i<values_str_arr.length; ++i){
 			now.setValue(Integer.parseInt(values_str_arr[i]));
-			now.setNext(new Node());
+			if(i!= values_str_arr.length-1){
+				now.setNext(new Node());
+			}
 			now = now.next();
 		}
 		return head;
