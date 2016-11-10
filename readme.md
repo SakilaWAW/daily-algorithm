@@ -57,6 +57,20 @@ I will implement all common sort methods in the near future.
 Today,I will realize the most useful sort algorithm:Heap sort & Quick sort!Quick sort is known  
 as the top ten algorithm during the decade.EXCITING!~＞ω＜(code is merged in day6's project.)
 
+##day9
+
+The question is:  
+ Input:a single linked list,a number k  
+ Output:the value of No.k node in reverse order.(the last node is No.0 node in reverse order)  
+
+#day10
+
+The question is:  
+Given a string, determine if it is a palindrome,considering only alphanumeric characters and ignoring cases.  
+Number is not allowed.  
+For example:  
+ "A man, a plan, a canal: Panama" is a palindrome.  
+ "race a car" is not a palindrome.  
 
 
 
