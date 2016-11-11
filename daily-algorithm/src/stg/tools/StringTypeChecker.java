@@ -13,12 +13,12 @@ public class StringTypeChecker{
 	/**
 	 * Return if a string can turn to a integer.
 	 * (contains positive and negative integer)
-	 * @param str target string
+	 * @param target target string
 	 * @return true:is integer,false:not
 	 */
-	public static boolean isInteger(String str){
-		if(str == null) return false;
-		if(str.matches("^-?\\d+$")){
+	public static boolean isInteger(String target){
+		if(target == null) return false;
+		if(target.matches("^-?\\d+$")){
 			return true;
 		}
 		return false;
@@ -26,12 +26,12 @@ public class StringTypeChecker{
 	
 	/**
 	 * Return if a string can turn to a positive integer.
-	 * @param str target string
+	 * @param target target string
 	 * @return true:is positive integer,false:not
 	 */
-	public static boolean isPositiveInteger(String str){
-		if(str == null) return false;
-		if(str.matches("^\\d+$")){
+	public static boolean isPositiveInteger(String target){
+		if(target == null) return false;
+		if(target.matches("^\\d+$")){
 			return true;
 		}
 		return false;
@@ -39,13 +39,13 @@ public class StringTypeChecker{
 	
 	/**
 	 * Return if a string is can turn into a integer array.
-	 * @param str target string
+	 * @param target target string
 	 * @param regex the separator of the array. 
 	 * @return true:is integer array,false:not
 	 */
-	public static boolean isIntegerArray(String str,String regex){
-		if(str == null) return false;
-		String[] str_arr = str.split(regex);
+	public static boolean isIntegerArray(String target,String splitRegex){
+		if(target == null) return false;
+		String[] str_arr = target.split(splitRegex);
 		for(int i =0 ; i<str_arr.length ; ++i){
 			if(str_arr[i].isEmpty() || !isInteger(str_arr[i])){
 				return false;
@@ -56,12 +56,12 @@ public class StringTypeChecker{
 	
 	/**
 	 * Return if a string is an English letter.
-	 * @param str 
+	 * @param target 
 	 * @return true:yes,false:not
 	 */
-	public static boolean isALetter(String str){
-		if(str == null) return false;
-		if(str.length()==1 && Character.isLetter(str.charAt(0))){
+	public static boolean isALetter(String target){
+		if(target == null) return false;
+		if(target.length()==1 && Character.isLetter(target.charAt(0))){
 			return true;
 		}else{
 			return false;
@@ -73,11 +73,11 @@ public class StringTypeChecker{
 	 * return if a string is an English punctuation.<br/>
 	 * the punctuation contains:<br/>
 	 * , and . and ' and " and ? and ! and - and :
-	 * @param str
+	 * @param target
 	 * @return true if the string is a English Punctuation,false otherwise.
 	 */
-	public static boolean isAEnglishPunctuation(String str){
-		if(str == null) return false;
+	public static boolean isAEnglishPunctuation(String target){
+		if(target == null) return false;
 		List<Character> punctuations = new ArrayList<>();
 		punctuations.add(',');
 		punctuations.add('.');
@@ -88,7 +88,7 @@ public class StringTypeChecker{
 		punctuations.add('?');
 		punctuations.add(':');
 		punctuations.add(' ');
-		if(str.length() == 1 && punctuations.contains(str.charAt(0))){
+		if(target.length() == 1 && punctuations.contains(target.charAt(0))){
 			return true;
 		}
 		return false;
@@ -97,15 +97,13 @@ public class StringTypeChecker{
 	 * return if a string is an English sentence.
 	 * @return true:yes,false:not
 	 */
-	public static boolean isEnglishSentence(String str){
-		if(str == null) return false;
-		for(int i = 0; i<str.length(); ++i){
-			if(!isALetter(str.charAt(i)+"") && !isAEnglishPunctuation(str.charAt(i)+"")){
+	public static boolean isEnglishSentence(String target){
+		if(target == null) return false;
+		for(int i = 0; i<target.length(); ++i){
+			if(!isALetter(target.charAt(i)+"") && !isAEnglishPunctuation(target.charAt(i)+"")){
 				return false;
 			}
 		}
 		return true;
 	}
-
-	
 }
