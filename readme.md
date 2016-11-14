@@ -74,7 +74,8 @@ For example:
 
 ##day11
 
-Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).
+Given a non-empty array of integers, return the third maximum number in this array. If it does not exist,  
+return the maximum number. The time complexity must be in O(n).  
  
 Example 1:  
  Input: [3, 2, 1]  
@@ -89,8 +90,35 @@ Example 2:
 Example 3:  
  Input: [2, 2, 3, 1]  
  Output: 1  
- Explanation: Note that the third maximum here means the third maximum distinct number.
- Both numbers with value 2 are both considered as second maximum.
+ Explanation: Note that the third maximum here means the third maximum distinct number.  
+ Both numbers with value 2 are both considered as second maximum.  
 
+##day12
 
+Here is the question:  
+Compare two version numbers version1 and version2.  
+If version1 > version2 return 1, if version1 < 
+version2 return -1, otherwise return 0.  
+
+You may assume that the version strings are non-empty and contain only digits and the . character.  
+The . character does not represent a decimal point and is used to separate number sequences.  
+For instance, 2.5 is not "two and a half" or "half way to version three", it is the fifth second-level  
+revision of the second first-level revision.  
+
+Here is an example of version numbers ordering:  
+0.1 < 1.1 < 1.2 < 13.37  
+
+##day13
+
+The question is:  
+The string "PAYPALISHIRING" is written in a zigzag patternon a given number of rows like this:  
+(you may want to display this pattern in a fixed font for better legibility)  
+P A H N  
+APLSIIG  
+Y I R  
+And then read line by line:  
+"PAHNAPLSIIGYIR" Write the code that will take a string and make this conversion given a number of rows:  
+ 
+string convert(string text, int nRows);  
+convert("PAYPALISHIRING", 3) should return "PAHNAPLSIIGYIR".  
 
