@@ -106,4 +106,15 @@ public class StringTypeChecker{
 		}
 		return true;
 	}
+	
+	/**
+	 * return if all of  the characters in target English letter.
+	 */
+	public static boolean isAllLetters(String target){
+		if(target == null) return false;
+		if(target.matches("[a-zA-z]*")){
+			return true;
+		}
+		return false;
+	}
 }
