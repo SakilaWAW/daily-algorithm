@@ -13,6 +13,9 @@ package stg.algorithm.day14;
  */
 public class Algorithm {
 	
+	/**
+	 * This method beats 82% of java submissions.It feels good :)
+	 */
 	public static String getReverseVowelsString(String target){
 		if(target.length() == 0 || target.length() == 1) return target;
 		int front = 0;
