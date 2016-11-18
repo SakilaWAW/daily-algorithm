@@ -38,6 +38,22 @@ public class StringTypeChecker {
 	public static boolean isPositiveInteger(String target) {
 		if (target == null)
 			return false;
+		if (target.matches("^[0-9]*[1-9][0-9]*$")) {
+			return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * Return if a string can turn to a non-negative integer.
+	 * 
+	 * @param target
+	 *            target string
+	 * @return true:is positive integer,false:not
+	 */
+	public static boolean isNonNegativeInteger(String target) {
+		if (target == null)
+			return false;
 		if (target.matches("^\\d+$")) {
 			return true;
 		}
@@ -79,6 +95,27 @@ public class StringTypeChecker {
 		String[] str_arr = target.split(splitRegex);
 		for (int i = 0; i < str_arr.length; ++i) {
 			if (str_arr[i].isEmpty() || !isInteger(str_arr[i])) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	/**
+	 * Return if a string is can turn into a non-negative integer array.
+	 * 
+	 * @param target
+	 *            target string
+	 * @param regex
+	 *            the separator of the array.
+	 * @return true:is integer array,false:not
+	 */
+	public static boolean isNonNagativeIntegerArray(String target, String splitRegex) {
+		if (target == null)
+			return false;
+		String[] str_arr = target.split(splitRegex);
+		for (int i = 0; i < str_arr.length; ++i) {
+			if (str_arr[i].isEmpty() || !isNonNegativeInteger(str_arr[i])) {
 				return false;
 			}
 		}
