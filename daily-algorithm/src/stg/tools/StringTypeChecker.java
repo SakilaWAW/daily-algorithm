@@ -193,4 +193,13 @@ public class StringTypeChecker {
 		}
 		return false;
 	}
+	
+	public static boolean isBinaryString(String target){
+		if (target == null)
+			return false;
+		if (target.matches("(0|^[1][0-1]*)")) {
+			return true;
+		}
+		return false;
+	}
 }
