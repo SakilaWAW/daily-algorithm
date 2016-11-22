@@ -1,6 +1,7 @@
 package stg.algorithm.day17;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 import stg.tools.StringTypeChecker;
 
