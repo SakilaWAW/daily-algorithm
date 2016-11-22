@@ -180,4 +180,10 @@ a = "11"
 b = "1"  
 Return "100".  
 
+##day18
+
+The question is:  
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']',determine if the input string is valid.The   
+brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.  
+
 
