@@ -194,10 +194,25 @@ public class StringTypeChecker {
 		return false;
 	}
 	
+	/**
+	 * a binary string only includes '0','1' and must start with '1'
+	 */
 	public static boolean isBinaryString(String target){
 		if (target == null)
 			return false;
 		if (target.matches("(0|^[1][0-1]*)")) {
+			return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * a English sentence without punctuation includes English letter and space.
+	 */
+	public static boolean isEnglishSentenceWithoutPunctuation(String target){
+		if (target == null)
+			return false;
+		if (target.matches("[a-zA-z ]*")) {
 			return true;
 		}
 		return false;
