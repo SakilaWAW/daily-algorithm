@@ -22,7 +22,7 @@ public class StringTypeChecker {
 	public static boolean isInteger(String target) {
 		if (target == null)
 			return false;
-		if (target.matches("^-?\\d+$")) {
+		if (target.matches("^-?[1-9]\\d*|0$")) {
 			return true;
 		}
 		return false;
@@ -38,7 +38,7 @@ public class StringTypeChecker {
 	public static boolean isPositiveInteger(String target) {
 		if (target == null)
 			return false;
-		if (target.matches("^[0-9]*[1-9][0-9]*$")) {
+		if (target.matches("^[1-9]\\d*$")) {
 			return true;
 		}
 		return false;
@@ -54,7 +54,7 @@ public class StringTypeChecker {
 	public static boolean isNonNegativeInteger(String target) {
 		if (target == null)
 			return false;
-		if (target.matches("^\\d+$")) {
+		if (target.matches("^[1-9]\\d*|0$")) {
 			return true;
 		}
 		return false;
