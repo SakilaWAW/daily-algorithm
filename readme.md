@@ -186,4 +186,53 @@ The question is:
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']',determine if the input string is valid.The   
 brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.  
 
+##day19
+
+The question is:  
+Given a string s consists of upper/lower-case alphabets and empty space characters ' ', return the length of last word in the string.  
+If the last word does not exist, return 0.  
+
+Note: A word is defined as a character sequence consists of non-space characters only.  
+For example:  
+Given s = "Hello World"  
+return 5.  
+
+##day20
+
+The question is:  
+Implement atoi to convert a string to an integer.  
+
+Hint: Carefully consider all possible input cases. If you want a challenge,  
+please do not see below and ask yourself what are the possible input cases.  
+Notes: It is intended for this problem to be specified vaguely  
+(ie, no given input specs). You are responsible to gather all the input  
+requirements up front.  
+
+Requirements for atoi:  
+The function first discards as many whitespace characters as necessary until the  
+first non-whitespace character is found. Then, starting from this character, takes  
+an optional initial plus or minus sign followed by as many numerical digits as possible,  
+and interprets them as a numerical value.The string can contain additional characters  
+after those that form the integral number, which are ignored and have no effect on the  
+behavior of this function.If the first sequence of non-whitespace characters in str is  
+not a valid integral number, or if no such sequence exists because either str is empty  
+or it contains only whitespace characters, no conversion is performed.  
+
+If no valid conversion could be performed, a zero value is returned. If the correct value  
+is out of the range of representable values, INT_MAX (2147483647) or INT_MIN (-2147483648)  
+is returned.  
+
+##day21
+
+The count-and-say sequence is the sequence of integers beginning as follows:  
+1, 11, 21, 1211, 111221, ...  
+
+1 is read off as "one 1" or 11.  
+11 is read off as "two 1s" or 21.  
+21 is read off as "one 2, then one 1" or 1211.  
+Given an integer n, generate the nth sequence.  
+Note: The sequence of integers will be represented as a string.  
+
+Input:index of target String  
+Output:target String  
 
